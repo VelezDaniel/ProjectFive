@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>¡Guess It!</title>
+    <link rel="stylesheet" href="../styles/adivina.css" />
+  </head>
+  <body>
+    <section>
+      <!--Ventana Emergente-->
+      <h2 class="section_title_w">Adivina el Número</h2>
+      <p class="sect_subtitle_w">
+        En este minijuego tendrás que adivinar el número
+      </p>
+      <p class="sect_p2">¡Buena Suerte!</p>
+
+      <!--SECTION ADIVINAR NUMERO-->
+      <h1 class="section_title">Adivina el Número</h1>
+      <div class="cont-sectn-adivinar">
+        <div class="section_contenedorn">
+          <div id="div_menor" class="section_menor sect-containers">
+            <span class="signos" id="menor">&lt;</span>
+          </div>
+          <div id="ventana1">
+            <textarea
+              id="text_menor"
+              placeholder="El número es menor"
+            ></textarea>
+          </div>
+          <div id="adivinar" class="section_adivinado">
+            <span id="adivino" class="interrogation">&#63;</span>
+          </div>
+          <div id="div_mayor" class="section_mayor sect-containers">
+            <span class="signos" id="mayor">&gt;</span>
+          </div>
+          <div id="ventana2">
+            <textarea
+              id="text_mayor"
+              placeholder="El número es mayor"
+            ></textarea>
+          </div>
+        </div>
+        <div class="section_numero">
+          <input type="text" required id="numberInput" />
+          <button id="btn-vamos" class="sect_btn">¡Vamos!</button>
+        </div>
+      </div>
+    </section>
+    <footer class="footer">
+      <img src="../imgs/LOgo Dvelez Gray.png" alt="" class="footer_logo" />
+      <p class="footer_p">&copy; Todos los derechos reservados</p>
+    </footer>
+    <script src="../fileJS/adivina.js"></script>
+  </body>
+</html>

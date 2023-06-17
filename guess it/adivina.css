@@ -1,0 +1,194 @@
+/*
+*Font-family: 'Lato', sans-serif;
+*Font_colors:
+**  background-color: 
+*
+*
+*
+*
+*/
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Lato", sans-serif;
+}
+
+/*
+------------SECTION DESIGN-------------
+*Background : #081e30, #062234
+*
+*/
+section {
+  background-image: linear-gradient(#081e30, #062234);
+  background-size: cover;
+  background-position: center;
+
+  height: 110vh;
+}
+
+/*---------Guessing Section---------*/
+.cont-sectn-adivinar {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.section_contenedorn,
+.section_title,
+.sect_btn {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  flex-wrap: wrap;
+}
+
+.section_contenedorn {
+  gap: 32px;
+  margin-top: 40px;
+}
+
+.section_title {
+  font-size: 54px;
+  font-weight: 700;
+  color: #ffffff;
+  text-shadow: 0 0 10px #c7d2fe;
+}
+
+.section_menor,
+.section_adivinado,
+.section_mayor {
+  box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+.section_menor,
+.section_mayor {
+  width: 250px;
+  height: 250px;
+  background-color: #090b23;
+  display: flex;
+  justify-content: center;
+}
+
+.signos {
+  font-size: 205px;
+  color: #c7d2fe;
+  font-weight: 500;
+  align-self: center;
+  justify-self: center;
+}
+
+/*----Number entry-----*/
+.section_adivinado {
+  background-color: #150322;
+  width: 250px;
+  height: 250px;
+
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+
+.interrogation {
+  color: #c7d2fe;
+  font-size: 198px;
+  font-weight: 600;
+  text-shadow: 0 0 10px black, 0 0 20px black, 0 0 30px #fff;
+}
+
+/*---- Button and Input---//
+*button
+  Background: #14b8a6
+  backgorund:hover #082f49
+*
+*input
+  Background: #150322
+  color: #fff
+*/
+
+.section_numero {
+  width: 300px;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-self: center;
+  gap: 24px;
+}
+
+.section_numero input {
+  width: 90px;
+  height: 90px;
+  align-self: center;
+  background-color: #150322;
+  box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.5);
+  border: none;
+  color: #fff;
+  font-weight: 500;
+  font-size: 42px;
+  text-align: center;
+  outline: 0;
+}
+
+.sect_btn {
+  width: 164px;
+  height: 64px;
+  background-color: #14b8a6;
+  font-size: 32px;
+  border: none;
+  align-self: center;
+  text-align: center;
+  font-weight: 600;
+  border-radius: 20px;
+}
+
+.sect_btn:hover {
+  width: 170px;
+  height: 72px;
+  color: #ffffff;
+  text-shadow: 0 0 10px #fff, 0 0 20px #fff;
+  background-color: #082f49;
+  cursor: pointer;
+}
+
+/*-------WINDOWS DESIGNS------*/
+
+#ventana1,
+#ventana2 {
+  display: none;
+  position: relative;
+}
+
+#text_menor,
+#text_mayor {
+  width: 200px;
+  height: 100px;
+}
+
+.sect-containers {
+  display: inline-block;
+}
+
+/*-----FOOTER------*/
+.footer {
+  background-color: #171717;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-content: center;
+  justify-content: space-evenly;
+}
+
+.footer_p {
+  font-family: "Scriptina", "Lobster", "Alex Brush", "Pacifico";
+  color: #515255;
+  font-weight: 500;
+  font-style: italic;
+  text-align: center;
+}
+
+.footer_logo {
+  width: 260px;
+  height: 210px;
+}
