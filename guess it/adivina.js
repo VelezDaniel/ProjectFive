@@ -1,18 +1,19 @@
-let numero = parseInt(document.getElementById("numberInput").value);
-let adivinar = Math.floor(Math.random() * 100);
+const $ = (selector) => document.querySelector(selector);
+const numero = $("numberInput").value;
+const adivinar = Math.floor(Math.random() * 100);
 
-let divMenor = document.getElementById("div_menor");
-let windowMenor = document.getElementById("ventana1");
-let divMajor = document.getElementById("div_mayor");
-let windowMajor = document.getElementById("ventana2");
-let btnVamos = document.getElementById("btn-vamos");
+const divMenor = $("div_menor");
+const windowMenor = $("ventana1");
+const divMajor = $("div_mayor");
+const windowMajor = $("ventana2");
+const btnVamos = $("btn-vamos");
 
 //Contenedor del numero adivinado
-let divAdivinado = document.getElementById("adivinar");
+let divAdivinado = $("adivinar");
 
 function adivina() {
-  let container1 = document.getElementById("menor");
-  let container2 = document.getElementById("mayor");
+  let container1 = $("menor");
+  let container2 = $("mayor");
   if (numero == adivinar) {
     adivinado();
   } else if (numero < adivinar) {
@@ -23,7 +24,7 @@ function adivina() {
 }
 
 function adivinado() {
-  let n = document.getElementById("adivino");
+  let n = $("adivino");
   n.textContent = numero;
 }
 

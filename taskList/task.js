@@ -1,17 +1,28 @@
 //Function for query
 const $ = (selector) => document.querySelector(selector);
 
-const $date = $("#date");
-const $list = $("#list");
+const $date = $("#date"); //Current date (div)
+const $list = $("#list"); // items tasks list (ul)
 const $inputAddTask = $("#input-addTask");
 const $btnAdd = $("#add");
+const $check = "fa-check-circle";
+const $uncheck = "fa-circle";
+const $lineThrough = "line-through";
+let id = 0;
 
 //FUNCTION ADD TASK
-function addingTask(task) {
+function addingTask(task, id, realized, deleted) {
+  if (eliminado) {
+    return;
+  }
+
+  const REALIZED = realized ? $check : $uncheck;
+  const LINE = realized ? $lineThrough : "";
+
   const element = `<li id="elemnt">
-  <i class="far fa-circle co" data="done" id="0"></i>
-  <p class="text-task">${task}</p>
-  <i class="fas fa-trash de" data-="deleted" id="0"></i>
+  <i class="far ${REALIZED}" data="done" id="${id}"></i>
+  <p class="text-task ${LINE}">${task}</p>
+  <i class="fas fa-trash de" data-="deleted" id="${id}"></i>
 </li>`;
   $list.insertAdjacentHTML("beforeend", element);
 }
@@ -19,17 +30,24 @@ function addingTask(task) {
 $btnAdd.addEventListener("click", () => {
   const task = $inputAddTask.value;
   if (task) {
-    addingTask(task);
+    addingTask(task, id, false, false);
   }
   $inputAddTask.value = "";
+  id++;
 });
 
 document.addEventListener("keyup", function (event) {
   if (event.key == "Enter") {
     const task = $inputAddTask.value;
     if (task) {
-      addingTask(task);
+      addingTask(task, id, false, false);
     }
     $inputAddTask.value = "";
+    id++;
   }
+});
+
+$list.addEventListener("click", function (event) {
+  const element = event.target;
+  const elementData = element.attributes.data.value;
 });
