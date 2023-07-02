@@ -33,11 +33,14 @@ body {
 }
 .perfil span {
   color: var(--dark-gray);
-  letter-spacing: 1px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
 }
 
 #date {
   color: var(--dark-gray);
+  font-weight: 700;
+  font-style: italic;
   padding: 50px 0 5px 0;
 }
 
